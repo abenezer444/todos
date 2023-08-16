@@ -69,6 +69,7 @@ export default function todoList({todos, setTodos}:Props) {
             <div className='icon-buttons'>
             <button className='icon-button' onClick={() => handleEdit(currentId)}><BiEdit/></button>
             <button className='icon-button delete' onClick={() => handleDelete(currentId)}><BiTrash/></button>
+          
             <button className='icon-button' onClick={() => handleTaskDone(currentId)}><BiCheck/></button>
             </div>
             
