@@ -15,7 +15,7 @@ const App:React.FC = () => {
   return (
     <>
       <p style={{textAlign:"center"}}>MY TODOS</p>
-      <InputField todos={todos} setTodos={setTodos}/>
+      <InputField setTodos={setTodos}/>
       <TodoList todos={todos} setTodos={setTodos}/>
     </>
   )

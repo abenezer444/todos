@@ -3,11 +3,10 @@ import {Todo} from '../../todo'
 import './inputField.css'
 
 interface props {
-    todos: Todo[]
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
 }
 
-const InputField = ({todos,setTodos}:props) => {
+const InputField = ({setTodos}:props) => {
     return (
         <form className='container' onSubmit={(e:FormEvent)=>{
             e.preventDefault()

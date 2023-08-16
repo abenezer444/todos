@@ -5,11 +5,10 @@ import './EditTask.css'; // Import your CSS file
 interface Props {
   currentId: string;
   task: string;
-  todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-export default function EditTask({ currentId, task, todos, setTodos }: Props) {
+export default function EditTask({ currentId, task, setTodos }: Props) {
   const [text, setText] = React.useState<string>(task);
 
   const handleSave = (e: React.FormEvent) => {

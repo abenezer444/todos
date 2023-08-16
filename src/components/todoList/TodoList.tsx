@@ -58,7 +58,7 @@ export default function todoList({todos, setTodos}:Props) {
         const currentId = todo.id;
         return <div key={todo.id} >
         {todo.isbeingEdited ? (
-          <EditTask currentId={todo.id} task={todo.task} todos={todos} setTodos={setTodos} />
+          <EditTask currentId={todo.id} task={todo.task}  setTodos={setTodos} />
         ) : (
           <div className='container'>
             {todo.isCompleted ? (
