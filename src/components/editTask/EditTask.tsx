@@ -1,6 +1,6 @@
 import React from 'react';
 import { Todo } from '../../todo';
-import './EditTask.css'; // Import your CSS file
+import './editTask.css'; // 
 
 interface Props {
   currentId: string;
