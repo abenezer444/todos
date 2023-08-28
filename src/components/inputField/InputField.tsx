@@ -1,12 +1,18 @@
 import React, { FormEvent } from 'react'
 import {Todo} from '../../todo'
 import './inputField.css'
+import { useRef,useEffect } from "react"
 
 interface props {
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
 }
 
 const InputField = ({setTodos}:props) => {
+    const inputRef = useRef<HTMLInputElement>(null)
+    useEffect(() => {
+        inputRef.current?.focus()
+    }, [])
+
     return (
         <form className='container' onSubmit={(e:FormEvent)=>{
             e.preventDefault()
@@ -25,7 +31,7 @@ const InputField = ({setTodos}:props) => {
             target.todo.value = ''
          
         }}>
-            <input type="input" className='input-field' placeholder='please enter your task here' name='todo' />
+            <input ref={inputRef} type="input" className='input-field' placeholder='please enter your task here' name='todo' />
             <button type='submit' className='button'>Go</button>
         </form>
     )
